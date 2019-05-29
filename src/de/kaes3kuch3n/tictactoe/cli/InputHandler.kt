@@ -1,5 +1,6 @@
 package de.kaes3kuch3n.tictactoe.cli
 
+import de.kaes3kuch3n.tictactoe.cli.exceptions.InvalidInputException
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.lang.NumberFormatException

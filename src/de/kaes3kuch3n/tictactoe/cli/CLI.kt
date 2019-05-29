@@ -1,5 +1,6 @@
 package de.kaes3kuch3n.tictactoe.cli
 
+import de.kaes3kuch3n.tictactoe.cli.exceptions.InvalidInputException
 import de.kaes3kuch3n.tictactoe.game.Game
 import de.kaes3kuch3n.tictactoe.game.GameState
 
@@ -19,7 +20,7 @@ class CLI(game: Game) {
                 try {
                     column = inputHandler.getInput()
                 } catch (e: InvalidInputException) {
-                    view.printInvalidInputError(DrawError.COLUMN)
+                    view.printInvalidInputError(DrawErrorType.COLUMN)
                     continue
                 }
 
@@ -28,7 +29,7 @@ class CLI(game: Game) {
                 try {
                     row = inputHandler.getInput()
                 } catch (e: InvalidInputException) {
-                    view.printInvalidInputError(DrawError.ROW)
+                    view.printInvalidInputError(DrawErrorType.ROW)
                     continue
                 }
 

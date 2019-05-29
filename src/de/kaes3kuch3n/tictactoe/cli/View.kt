@@ -1,5 +1,6 @@
 package de.kaes3kuch3n.tictactoe.cli
 
+import de.kaes3kuch3n.tictactoe.cli.exceptions.InvalidStateError
 import de.kaes3kuch3n.tictactoe.game.Field
 import de.kaes3kuch3n.tictactoe.game.GameState
 
@@ -42,7 +43,7 @@ class View(private val boardSize: Int) {
         print(rowInputPrompt)
     }
 
-    fun printInvalidInputError(error: DrawError) {
+    fun printInvalidInputError(error: DrawErrorType) {
         println("Invalid ${error.toString().toLowerCase()} input! $error must be a number between 1 and $boardSize")
     }
 
